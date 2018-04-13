@@ -23,6 +23,16 @@ class student extends CI_Controller {
         $this->load->view('search');
     }
 
+    public function unpaidList(){
+        $mon= date("n");
+        $req=$mon-2;
+        $query = "select * from students where ACADFEE < '".$mon."'";
+        $return = $this->_custom_query($query);
+        $this->load->view('navbar');
+        $this->load->view('unpaidFee');
+
+    }
+
     public function updateFee(){
         $submit=$this->input->post('submit',TRUE);
         if ($submit=="Submit"){

@@ -78,42 +78,45 @@
     <form style="display: none" action="<?=base_url('index.php/Student/updateFee')?>" method="post" id="months">
         <h3>Select months to update Academic fee</h3>
         <input name="rollno" type="hidden" id="hidden" value="">
-    <div class="checkbox">
-        <label><input name="jan" type="checkbox" value="1">January</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="feb" type="checkbox" value="2">February</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="mar" type="checkbox" value="3">March</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="apr" type="checkbox" value="4">April</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="may" type="checkbox" value="4">May</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="june"type="checkbox" value="5">June</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="july" type="checkbox" value="7">July</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="aug" type="checkbox" value="8">August</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="sep" type="checkbox" value="9">September</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="oct" type="checkbox" value="10">October</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="nov" type="checkbox" value="11">November</label>
-    </div>
-    <div class="checkbox">
-        <label><input name="dec" type="checkbox" value="12">December</label>
-    </div>
+        <div class="form-horizontal">
+            <fieldset>
+                <legend>Academic Fee</legend>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectbasic">Select Last Fee Paid Month</label>
+                    <div class="col-md-4">
+                        <select id="selectbasic" name="mon" class="form-control">
+                            <option>--Select Month--</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectbasic">Select Last Fee Paid Year</label>
+                    <div class="col-md-4">
+                        <select id="selectbasic" name="year" class="form-control">
+                            <option>--Select Year--</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+
         <input name="submit" type="submit" class="btn btn-primary" value="Submit" style="width: 20%"/>
     </form>
 </div>

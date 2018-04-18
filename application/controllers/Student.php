@@ -25,39 +25,33 @@ class student extends CI_Controller {
 
     public function unpaidList(){
         $mon= date("n");
-        $req=$mon-2;
-        $query = "select * from students where ACADFEE < '".$mon."'";
+        $req=$mon-3;
+        if ($req<=0){
+            $req=$req+12;
+        }
+        $query = "select * from students where ACADFEE < '".$req."'";
         $return = $this->_custom_query($query);
         $this->load->view('navbar');
         $this->load->view('unpaidFee');
-
     }
 
     public function updateFee(){
         $submit=$this->input->post('submit',TRUE);
         if ($submit=="Submit"){
-
-            $x[0]=$this->input->post('jan',TRUE);
-            $x[1]=$this->input->post('feb',TRUE);
-            $x[2]=$this->input->post('mar',TRUE);
-            $x[3]=$this->input->post('apr',TRUE);
-            $x[4]=$this->input->post('may',TRUE);
-            $x[5]=$this->input->post('june',TRUE);
-            $x[6]=$this->input->post('july',TRUE);
-            $x[7]=$this->input->post('aug',TRUE);
-            $x[8]=$this->input->post('sep',TRUE);
-            $x[9]=$this->input->post('oct',TRUE);
-            $x[10]=$this->input->post('nov',TRUE);
-            $x[11]=$this->input->post('dec',TRUE);
+            $mon=$this->input->post('mon');
+            $year=$this->input->post('year');
+            $oo=$mon."-".$year;
+            $dt=date_create($oo);
+            $acadDate= $dt->format('Y-m');
+            echo $acadDate;die;
             $roll=$this->input->post('rollno',TRUE);
-
-            $newMonth=max($x);
-            $query = "UPDATE students SET ACADFEE='".$newMonth."' WHERE ROLL='".$roll."'";
+            $query = "UPDATE students SET ACADFEE='".$acadDate."' WHERE ROLL='".$roll."'";
             $this->_custom_query($query);
         }
     }
     public function findStudent()
     {
+
         $submit=$this->input->post('submit',TRUE);
         if($submit== "FIND BY ROLL NUMBER");
         {

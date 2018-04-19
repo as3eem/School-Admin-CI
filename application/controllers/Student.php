@@ -24,15 +24,35 @@ class student extends CI_Controller {
     }
 
     public function unpaidList(){
-        $mon= date("n");
-        $req=$mon-3;
-        if ($req<=0){
-            $req=$req+12;
-        }
-        $query = "select * from students where ACADFEE < '".$req."'";
+        $req=new DateTime("30-05-2018");
+        $query = "select * from students where id='2'";
         $return = $this->_custom_query($query);
+        foreach ($return->result() as $k){
+            $tst=$k->ACADFEE;
+            $w= new DateTime("30-".$tst);
+            $w->format('d-m-Y');
+            $d=new DateTime("now");
+            print_r(($d));
+            echo $d->diff($w);die;
+        }
+        echo "<pre>";print_r($return->result());die;
         $this->load->view('navbar');
         $this->load->view('unpaidFee');
+    }
+
+
+    public function updateConvFee(){
+        $submit=$this->input->post('submit',TRUE);
+        if ($submit=="Submit"){
+            $mon=$this->input->post('mon');
+            $year=$this->input->post('year');
+            $acadDate=$mon."-".$year;
+            $roll=$this->input->post('rollno',TRUE);
+            $query = "UPDATE students SET CONVFEE='".$acadDate."' WHERE ROLL='".$roll."'";
+            $this->_custom_query($query);
+            echo "<script language=\"javascript\">alert('Fee updated Successfully');</script>";
+
+        }
     }
 
     public function updateFee(){
@@ -40,13 +60,12 @@ class student extends CI_Controller {
         if ($submit=="Submit"){
             $mon=$this->input->post('mon');
             $year=$this->input->post('year');
-            $oo=$mon."-".$year;
-            $dt=date_create($oo);
-            $acadDate= $dt->format('Y-m');
-            echo $acadDate;die;
+            $acadDate=$mon."-".$year;
             $roll=$this->input->post('rollno',TRUE);
             $query = "UPDATE students SET ACADFEE='".$acadDate."' WHERE ROLL='".$roll."'";
             $this->_custom_query($query);
+            echo "<script language=\"javascript\">alert('Fee updated Successfully');</script>";
+
         }
     }
     public function findStudent()
@@ -70,7 +89,6 @@ class student extends CI_Controller {
                 $data['ACADFEE'] = $row->ACADFEE;
                 $data['CONVFEE'] = $row->CONVFEE;
             }
-
             $this->load->view('navbar');
             $this->load->view('studentView',$data);
         }

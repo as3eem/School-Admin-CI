@@ -113,11 +113,56 @@
                         </select>
                     </div>
                 </div>
-
+                <input name="submit" type="submit" class="btn btn-primary" value="Submit" style="width: 20%; margin-left: 40%"/>
             </fieldset>
         </div>
+    </form>
 
-        <input name="submit" type="submit" class="btn btn-primary" value="Submit" style="width: 20%"/>
+
+<!--    --><br><br><br>
+
+
+    <form style="display: none" action="<?=base_url('index.php/Student/updateConvFee')?>" method="post" id="monthsC">
+        <h3>Select months to update Conveyance fee</h3>
+        <input name="rollno" type="hidden" id="hiddenA" value="">
+        <div class="form-horizontal">
+            <fieldset>
+                <legend>Conveyance Fee</legend>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectbasic">Select Last Fee Paid Month</label>
+                    <div class="col-md-4">
+                        <select id="selectbasic" name="mon" class="form-control">
+                            <option>--Select Month--</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectbasic">Select Last Fee Paid Year</label>
+                    <div class="col-md-4">
+                        <select id="selectbasic" name="year" class="form-control">
+                            <option>--Select Year--</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                </div>
+                <input name="submit" type="submit" class="btn btn-primary" value="Submit" style="width: 20%; margin-left: 40%"/>
+            </fieldset>
+        </div>
     </form>
 </div>
 <script type="text/javascript">
@@ -134,7 +179,11 @@
         x.style.display = "none";
         var y=document.getElementById("months");
         y.style.display = "";
+        var yy=document.getElementById("monthsC");
+        yy.style.display = "";
         var z=document.getElementById("hidden");
+        var zz=document.getElementById("hiddenA");
         z.value = document.getElementById("rollnumb").innerHTML;
+        zz.value = document.getElementById("rollnumb").innerHTML;
     }
 </script>

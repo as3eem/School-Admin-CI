@@ -23,16 +23,16 @@
             </div>
             <div class="col-md-3 footer-grid">
                 <ul>
-                    <li><a href="<?=base_url()?>index.php/Student/mail.html">Contact</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/gallery.html">Gallery</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/short-codes.html">Short Codes</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/mail">Contact</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/gallery">Gallery</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/About">Short Codes</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
                 <ul>
-                    <li><a href="<?=base_url()?>index.php/Student/events.html">News & Events</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/services.html">Services</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/index.html">Home</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/events">News & Events</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/services">Services</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/home">Home</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">

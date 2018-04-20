@@ -42,6 +42,46 @@ class student extends CI_Controller {
         $this->load->view('search');
     }
 
+    public function home(){
+
+        $this->load->view('webnav');
+        $this->load->view('home');
+
+        $this->load->view('webfooter');
+    }
+    public function services(){
+        $this->load->view('webnav');
+        $this->load->view('services');
+        $this->load->view('webfooter');
+    }
+    public function events(){
+        $this->load->view('webnav');
+        $this->load->view('events');
+        $this->load->view('webfooter');
+    }
+    public function gallery(){
+        $this->load->view('webnav');
+        $this->load->view('gallery');
+        $this->load->view('webfooter');
+    }
+    public function mail(){
+        $this->load->view('webnav');
+        $this->load->view('mail');
+        $this->load->view('webfooter');
+    }
+//    public function short_codes(){
+//        $this->load->view('webnav');
+//        $this->load->view('short_codes');
+//        $this->load->view('webfooter');
+//        }
+
+    public function single(){
+        $this->load->view('webnav');
+        $this->load->view('single');
+        $this->load->view('webfooter');
+    }
+
+
     public function unpaidList(){
         $list=array();
         $query = "select * from students";

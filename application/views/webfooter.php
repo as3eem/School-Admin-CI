@@ -8,7 +8,7 @@
         <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
             tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
         <div class="footer-contact">
-            <form onsubmit="return confirm('Thank you We will contact you soon');">
+            <form onsubmit="return confirm('Thank you. We will contact you soon.');">
                 <input type="text" placeholder="Enter your email to update" required=" ">
                 <input type="submit" value="">
             </form>
@@ -23,16 +23,16 @@
             </div>
             <div class="col-md-3 footer-grid">
                 <ul>
-                    <li><a href="<?=base_url()?>index.php/Student/mail.html">Contact</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/gallery.html">Gallery</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/short-codes.html">Short Codes</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/mail">Contact</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/gallery">Gallery</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/About">Short Codes</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
                 <ul>
-                    <li><a href="<?=base_url()?>index.php/Student/events.html">News & Events</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/services.html">Services</a></li>
-                    <li><a href="<?=base_url()?>index.php/Student/index.html">Home</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/events">News & Events</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/services">Services</a></li>
+                    <li><a href="<?=base_url()?>index.php/Student/home">Home</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">

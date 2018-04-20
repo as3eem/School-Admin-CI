@@ -23,4 +23,6 @@ class Welcome extends CI_Controller {
 	    $this->load->view('navbar');
 		$this->load->view('studReg.php');
 	}
+
+	
 }

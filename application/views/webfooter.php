@@ -8,7 +8,7 @@
         <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
             tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
         <div class="footer-contact">
-            <form onsubmit="return confirm('Thank you We will contact you soon');">
+            <form onsubmit="return confirm('Thank you. We will contact you soon.');">
                 <input type="text" placeholder="Enter your email to update" required=" ">
                 <input type="submit" value="">
             </form>

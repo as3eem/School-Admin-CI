@@ -5,18 +5,37 @@ class student extends CI_Controller {
 
     public function studentAdd()
     {
-        $submit = $this->input->post('submit',TRUE);
-        if ($submit == "Submit"){
-            $data['NAME'] = $this->input->post('name',TRUE);
-            $data['FNAME'] = $this->input->post('father',TRUE);
-            $data['CONTACT'] = $this->input->post('phone',TRUE);
-            $data['ROLL'] = $this->input->post('roll',TRUE);
-            $data['CLASS'] = $this->input->post('class',TRUE);
-            $data['ADDRESS'] = $this->input->post('address',TRUE);
-            $data['ACADFEE']=-1;
-            $data['CONVFEE']=-1;
-            $this->_insert($data);
+        $roll = $this->input->post('roll',TRUE);
+        $query = "select * from students WHERE ROLL='".$roll."'";
+        $return = $this->_custom_query($query);
+        $xwx=0;
+
+        foreach ($return->result() as $k){
+            $xwx++;
         }
+        if ($xwx==0) {
+            $submit = $this->input->post('submit', TRUE);
+            if ($submit == "Submit") {
+                $data['NAME'] = $this->input->post('name', TRUE);
+                $data['FNAME'] = $this->input->post('father', TRUE);
+                $data['CONTACT'] = $this->input->post('phone', TRUE);
+                $data['ROLL'] = $this->input->post('roll', TRUE);
+                $data['CLASS'] = $this->input->post('class', TRUE);
+                $data['ADDRESS'] = $this->input->post('address', TRUE);
+                $data['ACADFEE'] = -1;
+                $data['CONVFEE'] = -1;
+                $this->_insert($data);
+            }
+        }
+        else{
+            echo "<script language=\"javascript\">alert('Roll number already exist');</script>";
+        }
+        $this->ips_admin();
+    }
+    public function ips_admin()
+    {
+        $this->load->view('navbar');
+        $this->load->view('studReg.php');
     }
     public function search(){
         $this->load->view('navbar');
@@ -45,7 +64,6 @@ class student extends CI_Controller {
 //        echo "<pre>";print_r($return->result());
         $this->load->view('navbar');
         $this->load->view('unpaidFee',$data);
-
     }
 
 
@@ -59,7 +77,7 @@ class student extends CI_Controller {
             $query = "UPDATE students SET CONVFEE='".$acadDate."' WHERE ROLL='".$roll."'";
             $this->_custom_query($query);
             echo "<script language=\"javascript\">alert('Fee updated Successfully');</script>";
-
+            $this->ips_admin();
         }
     }
 
@@ -73,12 +91,12 @@ class student extends CI_Controller {
             $query = "UPDATE students SET ACADFEE='".$acadDate."' WHERE ROLL='".$roll."'";
             $this->_custom_query($query);
             echo "<script language=\"javascript\">alert('Fee updated Successfully');</script>";
-
+            $this->ips_admin();
         }
     }
+
     public function findStudent()
     {
-
         $submit=$this->input->post('submit',TRUE);
         if($submit== "FIND BY ROLL NUMBER");
         {

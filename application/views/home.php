@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/1.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="">
 												Kids Playing
 											</a>
 										</h3>
@@ -38,7 +38,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<div class="banner-info">
 
 										<h3>
-											<a href="single.html">
+											<a href="">
 												Kids Playing
 											</a>
 										</h3>
@@ -54,7 +54,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/3.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="">
 												Kids Playing
 											</a>
 										</h3>
@@ -68,7 +68,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/2.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="">
 												Kids studying
 											</a>
 										</h3>
@@ -135,25 +135,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								pleasure, but because those who do not know how to pursue pleasure 
 								rationally encounter consequences that are extremely painful.</span></p>
 <!--							<div class="more">-->
-<!--								<a href="single.html" class="hvr-rectangle-out">Read More...</a>-->
+<!--								<a href="" class="hvr-rectangle-out">Read More...</a>-->
 <!--							</div>-->
 <!--							<div class="tags">-->
 <!--								<h4>Tags</h4>-->
 <!--								<ul>-->
-<!--									<li><a href="single.html">Themes</a></li>-->
-<!--									<li><a href="single.html">Art</a></li>-->
-<!--									<li><a href="single.html">Music</a></li>-->
-<!--									<li><a href="single.html">Entertainment</a></li>-->
-<!--									<li><a href="single.html">New</a></li>-->
-<!--									<li><a href="single.html">Design</a></li>-->
-<!--									<li><a href="single.html">Books</a></li>-->
-<!--									<li><a href="single.html">Themes</a></li>-->
-<!--									<li><a href="single.html">Art</a></li>-->
-<!--									<li><a href="single.html">Music</a></li>-->
-<!--									<li><a href="single.html">Entertainment</a></li>-->
-<!--									<li><a href="single.html">New</a></li>-->
-<!--									<li><a href="single.html">Design</a></li>-->
-<!--									<li><a href="single.html">Books</a></li>-->
+<!--									<li><a href="">Themes</a></li>-->
+<!--									<li><a href="">Art</a></li>-->
+<!--									<li><a href="">Music</a></li>-->
+<!--									<li><a href="">Entertainment</a></li>-->
+<!--									<li><a href="">New</a></li>-->
+<!--									<li><a href="">Design</a></li>-->
+<!--									<li><a href="">Books</a></li>-->
+<!--									<li><a href="">Themes</a></li>-->
+<!--									<li><a href="">Art</a></li>-->
+<!--									<li><a href="">Music</a></li>-->
+<!--									<li><a href="">Entertainment</a></li>-->
+<!--									<li><a href="">New</a></li>-->
+<!--									<li><a href="">Design</a></li>-->
+<!--									<li><a href="">Books</a></li>-->
 <!--								</ul>-->
 <!--							</div>-->
 						</div>
@@ -267,26 +267,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="banner-bottom-grid-fig1">
 									<img src="<?=base_url()?>Static/home/images/4.jpg" alt=" " class="img-responsive" />
 									<div class="banner-bottom-grid-fig1-pos">
-										<a href="single.html">At vero eos et accusamus et iusto odio dignissimos ducimus</a>
-										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 20, 2016 By <a href="single.html">Andrew Smith</a></p>
+<!--										<a href="">At vero eos et accusamus et iusto odio dignissimos ducimus</a>-->
+										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 20, 2016 By </p>
 									</div>
 								</div>
 								<div class="banner-bottom-grid-fig-grid">
 									<div class="banner-bottom-grid-fig-grid1">
-										<h4><span>Plan-1</span><a href="single.html">Sed ut perspiciatis unde omnis iste natus</a></h4>
-										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 25, 2016 By <a href="single.html">Michael</a></p>
+										<h4><span>Plan-1</span></h4>
+										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 25, 2016 By </p>
 									</div>
 								</div>
 								<div class="banner-bottom-grid-fig-grid">
 									<div class="banner-bottom-grid-fig-grid1">
-										<h4><span>Plan-2</span><a href="single.html">Neque porro quisquam est, qui dolorem ipsum quia</a></h4>
-										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 28, 2016 By <a href="single.html">Laura James</a></p>
+										<h4><span>Plan-2</span></h4>
+										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 28, 2016 By </p>
 									</div>
 								</div>
 								<div class="banner-bottom-grid-fig-grid">
 									<div class="banner-bottom-grid-fig-grid1">
-										<h4><span>Plan-3</span><a href="single.html">Similique sunt in culpa qui officia deserunt</a></h4>
-										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 30, 2016 By <a href="single.html">Fedrick</a></p>
+										<h4><span>Plan-3</span></h4>
+										<p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>March 30, 2016 By </p>
 									</div>
 								</div>
 							</div>

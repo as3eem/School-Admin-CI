@@ -8,7 +8,7 @@
         <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
             tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
         <div class="footer-contact">
-            <form>
+            <form onsubmit="return confirm('Thank you We will contact you soon');">
                 <input type="text" placeholder="Enter your email to update" required=" ">
                 <input type="submit" value="">
             </form>
@@ -36,24 +36,23 @@
                 </ul>
             </div>
             <div class="col-md-3 footer-grid">
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="<?=base_url()?>Static/home/images/10.jpg" alt=" " class="img-responsve" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="<?=base_url()?>Static/home/images/12.jpg" alt=" " class="img-responsve" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="<?=base_url()?>Static/home/images/11.jpg" alt=" " class="img-responsve" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="<?=base_url()?>Static/home/images/10.jpg" alt=" " class="img-responsve" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="<?=base_url()?>Static/home/images/8.jpg" alt=" " class="img-responsve" /></a>
-                </div>
-                <div class="footer-grid-left">
-                    <a href="single.html"><img src="<?=base_url()?>Static/home/images/9.jpg" alt=" " class="img-responsve" /></a>
-                </div>
+<!--                <div class="footer-grid-left">-->
+<!--                    <img src="--><?//=base_url()?><!--Static/home/images/10.jpg" alt=" " class="img-responsve" />-->
+<!--                </div>-->
+<!--                <img src="--><?//=base_url()?><!--Static/home/images/12.jpg" alt=" " class="img-responsve" />-->
+<!--                </div>-->
+<!--                <div class="footer-grid-left">-->
+<!--                    <img src="--><?//=base_url()?><!--Static/home/images/11.jpg" alt=" " class="img-responsve" />-->
+<!--                </div>-->
+<!--                <div class="footer-grid-left">-->
+<!--                    <img src="--><?//=base_url()?><!--Static/home/images/10.jpg" alt=" " class="img-responsve" />-->
+<!--                </div>-->
+<!--                <div class="footer-grid-left">-->
+<!--                    <img src="--><?//=base_url()?><!--Static/home/images/8.jpg" alt=" " class="img-responsve" />-->
+<!--                </div>-->
+<!--                <div class="footer-grid-left">-->
+<!--                    <img src="--><?//=base_url()?><!--Static/home/images/9.jpg" alt=" " class="img-responsve" />-->
+<!--                </div>-->
                 <div class="clearfix"> </div>
             </div>
             <div class="clearfix"> </div>

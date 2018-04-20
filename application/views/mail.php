@@ -21,7 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/1.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/4.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/3.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -65,7 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/2.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids studying
 											</a>
 										</h3>
@@ -171,20 +171,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="clearfix"> </div>
 					</div>
 					<div class="map-grids">
-						<div class="col-md-6 map-grid">
+						<div class="map-grid">
 							<h3>Our Location On <span>Map</span></h3>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.493767672681!2d-111.03253628461667!3d45.660987028312086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x534544e474e6bfd9%3A0xe93756749fe17d2e!2sChildrens+School!5e0!3m2!1sen!2sin!4v1454664428808" frameborder="0" style="border:0" allowfullscreen></iframe>
-						</div>
-						<div class="col-md-6 map-grid">
-							<h3>Send <span>Message</span></h3>
-							<form>
-								<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
-								<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-								<input type="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
-								<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-								<input type="submit" value="Submit Now" >
-							</form>
-						</div>
+<!--							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.493767672681!2d-111.03253628461667!3d45.660987028312086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x534544e474e6bfd9%3A0xe93756749fe17d2e!2sChildrens+School!5e0!3m2!1sen!2sin!4v1454664428808" frameborder="0" style="border:0" allowfullscreen></iframe>-->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14312.500926047771!2d82.0653176!3d26.2575987!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0f811a5f75259dd!2sIndian+Public+School!5e0!3m2!1sen!2sin!4v1524210832788" width="100" height="40" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <br>
+<!--						<div class="col-md-6 map-grid">-->
+<!--							<h3>Send <span>Message</span></h3>-->
+<!--							<form>-->
+<!--								<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">-->
+<!--								<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">-->
+<!--								<input type="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">-->
+<!--								<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>-->
+<!--								<input type="submit" value="Submit Now" >-->
+<!--							</form>-->
+<!--						</div>-->
 						<div class="clearfix"> </div>
 					</div>
 				</div>

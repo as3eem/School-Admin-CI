@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/1.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/4.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/3.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -58,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/2.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids studying
 											</a>
 										</h3>

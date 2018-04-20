@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li class="active"><a href="<?=base_url('index.php/Student/home')?>">Home</a></li>
                                 <li><a href="<?=base_url('index.php/Student/services')?>" class="hvr-rectangle-out">Services</a></li>
                                 <li><a href="<?=base_url('index.php/Student/events')?>" class="hvr-rectangle-out">News & Events</a></li>
-                                <li><a href="<?=base_url('index.php/Student/short_codes')?>" class="hvr-rectangle-out">Short Codes</a></li>
+                                <li><a href="#" class="hvr-rectangle-out">About</a></li>
                                 <li><a href="<?=base_url('index.php/Student/gallery')?>" class="hvr-rectangle-out">Gallery</a></li>
                                 <li><a href="<?=base_url('index.php/Student/mail')?>" class="hvr-rectangle-out">Mail Us</a></li>
                             </ul>

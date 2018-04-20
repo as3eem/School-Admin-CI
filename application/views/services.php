@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/1.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -28,7 +28,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/4.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -44,7 +44,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/3.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids Playing
 											</a>
 										</h3>
@@ -58,7 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<img src="<?=base_url()?>Static/home/images/2.jpg" alt=" " class="img-responsive" />
 									<div class="banner-info">
 										<h3>
-											<a href="single.html">
+											<a href="#">
 												Kids studying
 											</a>
 										</h3>
@@ -142,38 +142,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="services-grids1">
 						<div class="col-md-3 services-grids1-grid">
 							<img src="<?=base_url()?>Static/home/images/8.jpg" alt=" " class="img-responsive" />
-							<h4><a href="single.html">Nemo enim volup</a></h4>
+							<h4>Nemo enim volup</h4>
 							<p>But I must explain to you how all this mistaken idea of 
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">Read More...</a>
+								<a href="#" class="hvr-rectangle-out">Read More...</a>
 							</div>
 						</div>
 						<div class="col-md-3 services-grids1-grid">
 							<img src="<?=base_url()?>Static/home/images/9.jpg" alt=" " class="img-responsive" />
-							<h4><a href="single.html">quasi archite</a></h4>
+							<h4>quasi archite</h4>
 							<p>But I must explain to you how all this mistaken idea of 
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">Read More...</a>
+								<a href="#" class="hvr-rectangle-out">Read More...</a>
 							</div>
 						</div>
 						<div class="col-md-3 services-grids1-grid">
 							<img src="<?=base_url()?>Static/home/images/10.jpg" alt=" " class="img-responsive" />
-							<h4><a href="single.html">quia voluptas sit</a></h4>
+							<h4>quia voluptas sit</h4>
 							<p>But I must explain to you how all this mistaken idea of 
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">Read More...</a>
+								<a href="#" class="hvr-rectangle-out">Read More...</a>
 							</div>
 						</div>
 						<div class="col-md-3 services-grids1-grid">
 							<img src="<?=base_url()?>Static/home/images/11.jpg" alt=" " class="img-responsive" />
-							<h4><a href="single.html">totam rem aperiam</a></h4>
+							<h4>totam rem aperiamx`</h4>
 							<p>But I must explain to you how all this mistaken idea of 
 								denouncing pleasure and praising pain was born.</p>
 							<div class="more">
-								<a href="single.html" class="hvr-rectangle-out">Read More...</a>
+								<a href="#" class="hvr-rectangle-out">Read More...</a>
 							</div>
 						</div>
 						<div class="clearfix"> </div>

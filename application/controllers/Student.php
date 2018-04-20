@@ -50,11 +50,11 @@ class student extends CI_Controller {
         $this->load->view('mail');
         $this->load->view('webfooter');
     }
-    public function short_codes(){
-        $this->load->view('webnav');
-        $this->load->view('short_codes');
-        $this->load->view('webfooter');
-        }
+//    public function short_codes(){
+//        $this->load->view('webnav');
+//        $this->load->view('short_codes');
+//        $this->load->view('webfooter');
+//        }
 
     public function single(){
         $this->load->view('webnav');

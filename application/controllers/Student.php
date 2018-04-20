@@ -64,20 +64,28 @@ class student extends CI_Controller {
 
 
     public function unpaidList(){
-        $req=new DateTime("30-05-2018");
-        $query = "select * from students where id='2'";
+        $list=array();
+        $query = "select * from students";
         $return = $this->_custom_query($query);
         foreach ($return->result() as $k){
             $tst=$k->ACADFEE;
-            $w= new DateTime("30-".$tst);
-            $w->format('d-m-Y');
-            $d=new DateTime("now");
-            print_r(($d));
-            echo $d->diff($w);die;
+            if($tst != NULL && $tst!='-1') {
+                $date1 = date_create("30-" . $tst);
+                $date2 = date_create("now");
+                $diff = date_diff($date1, $date2);
+                $result = $diff->m;
+                if ($result>3){
+                    array_push($list, $k->id);
+                }
+            }
         }
-        echo "<pre>";print_r($return->result());die;
+        $sql = 'SELECT * FROM `students` WHERE `id` IN (' . implode(',', array_map('intval', $list)) . ')';
+        $return = $this->_custom_query($sql);
+        $data['return']=$return;
+//        echo "<pre>";print_r($return->result());
         $this->load->view('navbar');
-        $this->load->view('unpaidFee');
+        $this->load->view('unpaidFee',$data);
+
     }
 
 

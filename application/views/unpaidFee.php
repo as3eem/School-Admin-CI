@@ -23,85 +23,46 @@
         <thead>
         <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-            <th style="width: 36px;"></th>
+            <th>Name</th>
+            <th>Father's Name</th>
+            <th>Contact</th>
+            <th>CLASS</th>
+            <th>ACADFEE</th>
+            <th>CONVFEE</th>
         </tr>
         </thead>
         <tbody>
+        <?php
+        $i = 0;
+
+        foreach ($return->result() as $row)
+        {
+        $i++;
+        ?>
+
+            <tr>
+                <td><?=$i?></td>
+                <td><?=$row->NAME?></td>
+                <td><?=$row->FNAME?></td>
+                <td><?=$row->CONTACT?></td>
+                <td><?=$row->CLASS?></td>
+                <td><?=$row->ACADFEE?></td>
+                <td><?=$row->CONVFEE?></td>
+            </tr>
+        <?php
+        }
+        ?>
+
         <tr>
             <td>1</td>
             <td>Mark</td>
             <td>Tompson</td>
             <td>the_mark7</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Ashley</td>
-            <td>Jacobs</td>
-            <td>ash11927</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Audrey</td>
-            <td>Ann</td>
-            <td>audann84</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>John</td>
-            <td>Robinson</td>
-            <td>jr5527</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Aaron</td>
-            <td>Butler</td>
-            <td>aaron_butler</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Chris</td>
-            <td>Albert</td>
-            <td>cab79</td>
-            <td>
-                <a href="user.html"><i class="icon-pencil"></i></a>
-                <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-            </td>
+            <td>the_mark7</td>
+            <td>the_mark7</td>
         </tr>
         </tbody>
     </table>
-</div>
-<div class="pagination">
-    <ul>
-        <li><a href="#">Prev</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">Next</a></li>
-    </ul>
 </div>
 <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">

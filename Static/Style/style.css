@@ -1,8 +1,8 @@
 /*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
+Author: as3eem
+Author URL: github.com/as3eem
+License:
+License URL:
 --*/
 /* reset */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
@@ -75,7 +75,7 @@ ul{
 }
 /*-- //Reset-Code --*/
 body {
-    background: url(../images/1.jpg);
+    background: url("https://topbackgroundwallpaper.com/wp-content/uploads/2018/03/www-photo-wallpaper-photo-1472152083436-a6eede6efad9-ixlib-rb-0-3-5-s-w-1000-q-80-hd-wallpapers-download-hd-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;

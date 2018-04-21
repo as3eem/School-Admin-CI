@@ -24,6 +24,13 @@ class student extends CI_Controller {
                 $data['ADDRESS'] = $this->input->post('address', TRUE);
                 $data['ACADFEE'] = -1;
                 $data['CONVFEE'] = -1;
+                $q = $this->input->post('conv', TRUE);
+                if ($q=="1"){
+                    $data['CONVEYANCE']="Available";
+                }
+                else{
+                    $data['CONVEYANCE']="Not Available";
+                }
                 $this->_insert($data);
             }
         }
@@ -43,10 +50,8 @@ class student extends CI_Controller {
     }
 
     public function home(){
-
         $this->load->view('webnav');
         $this->load->view('home');
-
         $this->load->view('webfooter');
     }
     public function services(){
@@ -93,15 +98,56 @@ class student extends CI_Controller {
                 $date2 = date_create("now");
                 $diff = date_diff($date1, $date2);
                 $result = $diff->m;
+//                print_r($date1);
+//                echo "<br>";
+//                print_r($date2);
+//                echo "<br>";
+//                echo $result;
                 if ($result>3){
                     array_push($list, $k->id);
                 }
             }
         }
-        $sql = 'SELECT * FROM `students` WHERE `id` IN (' . implode(',', array_map('intval', $list)) . ')';
-        $return = $this->_custom_query($sql);
+        if (sizeof($list)>0) {
+            $sql = 'SELECT * FROM `students` WHERE `id` IN (' . implode(',', array_map('intval', $list)) . ')';
+            $return = $this->_custom_query($sql);
+        }
+        else{
+            $return=array((object)array('NAME'=>'','FNAME'=>'','CLASS'=>'','CONTACT'=>'','ACADFEE'=>'','CONVFEE'=>'',));
+        }
         $data['return']=$return;
-//        echo "<pre>";print_r($return->result());
+//      echo "<pre>";print_r($return->result());
+        $this->load->view('navbar');
+        $this->load->view('unpaidFee',$data);
+    }
+
+
+
+    public function unpaidListTwo(){
+        $list=array();
+        $query = "select * from students";
+        $return = $this->_custom_query($query);
+        foreach ($return->result() as $k){
+            $tst=$k->ACADFEE;
+            if($tst != NULL && $tst!='-1') {
+                $date1 = date_create("30-" . $tst);
+                $date2 = date_create("now");
+                $diff = date_diff($date1, $date2);
+                $result = $diff->m;
+                if ($result>2){
+                    array_push($list, $k->id);
+                }
+            }
+        }
+        if (sizeof($list)>0) {
+            $sql = 'SELECT * FROM `students` WHERE `id` IN (' . implode(',', array_map('intval', $list)) . ')';
+            $return = $this->_custom_query($sql);
+        }
+        else{
+            $return=array((object)array('NAME'=>'','FNAME'=>'','CLASS'=>'','CONTACT'=>'','ACADFEE'=>'','CONVFEE'=>'',));
+        }
+        $data['return']=$return;
+//      echo "<pre>";print_r($return->result());
         $this->load->view('navbar');
         $this->load->view('unpaidFee',$data);
     }
@@ -135,10 +181,28 @@ class student extends CI_Controller {
         }
     }
 
-    public function findStudent()
+    public function findStudentClass()
     {
         $submit=$this->input->post('submit',TRUE);
-        if($submit== "FIND BY ROLL NUMBER");
+        if($submit== "Search by Class")
+        {
+            $class=$this->input->post('class',TRUE);
+            $query = "select * from students  where CLASS='".$class."'";
+            $return = $this->_custom_query($query);
+            $data['return']=$return;
+//      echo "<pre>";print_r($return->result());
+            $this->load->view('navbar');
+            $this->load->view('unpaidFee',$data);
+        }
+
+
+
+
+    }
+        public function findStudent()
+    {
+        $submit=$this->input->post('submit',TRUE);
+        if($submit== "Search by Roll Number")
         {
             $roll=$this->input->post('roll',TRUE);
             $query = "select * from students where ROLL = '$roll'";
@@ -154,6 +218,13 @@ class student extends CI_Controller {
                 $data['ADDRESS'] = $row->ADDRESS;
                 $data['ACADFEE'] = $row->ACADFEE;
                 $data['CONVFEE'] = $row->CONVFEE;
+                $q = $row->CONVEYANCE;
+                if ($q=="1"){
+                    $data['CONVEYANCE']="Available";
+                }
+                else{
+                    $data['CONVEYANCE']="Not Available";
+                }
             }
             $this->load->view('navbar');
             $this->load->view('studentView',$data);

@@ -88,20 +88,20 @@
 <!--            <span class="icon-bar"></span>-->
 <!--            <span class="icon-bar"></span>-->
 <!--          </button>-->
-          <a class="navbar-brand" href="#">INDIAN PUBLIC SCHOOL</a>
+          <div class="navbar-brand">INDIAN PUBLIC SCHOOL</div>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-4">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?=base_url()?>index.php/Welcome">Registration</a></li>
+            <li><a href="<?=base_url()?>index.php/Welcome/loginCheck">Registration</a></li>
             <li><a href="<?=base_url()?>index.php/Student/search">Search</a></li>
 <!--            <li><a href="#">Services</a></li>-->
 <!--            <li><a href="#">Works</a></li>-->
 <!--            <li><a href="#">News</a></li>-->
 <!--            <li><a href="#">Contact</a></li>-->
             <li>
-              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse4" aria-expanded="false" aria-controls="nav-collapse4">Logout <i class=""></i> </a>
+              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="<?=base_url()?>index.php/welcome/logout" aria-expanded="false" aria-controls="nav-collapse4">Logout <i class=""></i> </a>
             </li>
           </ul>
           <ul class="collapse nav navbar-nav nav-collapse slide-down" role="search" id="nav-collapse4">
@@ -109,7 +109,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img class="img-circle" src="https://pbs.twimg.com/profile_images/588909533428322304/Gxuyp46N.jpg" alt="maridlcrmn" width="20" /> Maridlcrmn <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Logout</a></li>
+                <li><a href="<?=base_url()?>">Logout</a></li>
               </ul>
             </li>
           </ul>

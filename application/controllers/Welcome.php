@@ -20,9 +20,47 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-	    $this->load->view('navbar');
-		$this->load->view('studReg.php');
+        $this->load->view('webnav');
+        $this->load->view('home');
+        $this->load->view('webfooter');
+
 	}
 
-	
+	public function _admin(){
+        $this->load->view('navbar');
+        $this->load->view('studReg.php');
+    }
+
+    public function logout(){
+        $this->session->sess_destroy();
+        redirect(base_url());
+    }
+    public function loginCheck(){
+        $submit=$this->input->post('Submit',TRUE);
+        if ($this->session->userdata('admin_logged_in')){
+            $this->_admin();
+        }
+        else if ($submit=="Submit"){
+            $un=$this->input->post('userName',TRUE);
+            $pwd=$this->input->post('passwordinput',TRUE);
+            if ($un=="ips" && $pwd=="IPS@sultanpur"){
+                $sessiondata = array(
+                    //get user id here
+                    'admin_id'=>$pwd,
+                    'username' => $un,
+                    'admin_logged_in' => TRUE
+                );
+                $this->session->set_userdata($sessiondata);
+                $this->_admin();
+            }
+            else{
+                echo "<script language=\"javascript\">alert('Please login with correct details');</script>";
+                $this->adminLogin();
+            }
+        }
+    }
+    public function adminLogin(){
+        $this->load->view('adminLogin');
+    }
+
 }

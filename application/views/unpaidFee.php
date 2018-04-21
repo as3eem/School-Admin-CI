@@ -29,6 +29,7 @@
             <th>CLASS</th>
             <th>ACADFEE</th>
             <th>CONVFEE</th>
+            <th>CONVEYANCE</th>
         </tr>
         </thead>
         <tbody>
@@ -46,21 +47,24 @@
                 <td><?=$row->FNAME?></td>
                 <td><?=$row->CONTACT?></td>
                 <td><?=$row->CLASS?></td>
-                <td><?=$row->ACADFEE?></td>
-                <td><?=$row->CONVFEE?></td>
+                <td id="acadfee"><?=$row->ACADFEE?></td>
+                <td id="convfee"><?=$row->CONVFEE?></td>
+                <td><?=$row->CONVEYANCE?></td>
             </tr>
         <?php
+            echo "
+            <script type=\"text/javascript\">
+                var acad=document.getElementById(\"acadfee\").innerHTML;
+                if(acad ===\"-1\"){
+                    document.getElementById(\"acadfee\").innerHTML=\"No fee submitted yet\";
+                }
+                var conv=document.getElementById(\"convfee\").innerHTML;
+                if(conv ===\"-1\"){
+                    document.getElementById(\"convfee\").innerHTML=\"No fee submitted yet\";
+                }
+            </script>";
         }
         ?>
-
-        <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Tompson</td>
-            <td>the_mark7</td>
-            <td>the_mark7</td>
-            <td>the_mark7</td>
-        </tr>
         </tbody>
     </table>
 </div>

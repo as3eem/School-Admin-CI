@@ -61,6 +61,7 @@
 						<input type="text" name="class" placeholder="Class" required="">
 						<input type="text" name="address" placeholder="Address" required="">
 						<div class="clear"></div>
+                        <input type="checkbox" name="conv" value="1"> <span style="color: white">Conveyance</span>
 					</div>
 				</div>
 			</div>
@@ -75,7 +76,7 @@
 		<p>&copy;2018 Student Registration Form. All Rights Reserved | Design by Ritronix Technology</p>
 	</div>
 	<!-- js -->
-	<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+	<script type='text/javascript' src='<?=base_url()?>Static/Style/js/jquery-2.2.3.min.js'></script>
 	<!-- //js -->
 
 </body>

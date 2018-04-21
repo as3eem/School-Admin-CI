@@ -1,7 +1,7 @@
 <?php
 ?>
 
-
+<br>
 <div class="footer">
     <div class="container">
         <h3>Sign up for our newsletter</h3>

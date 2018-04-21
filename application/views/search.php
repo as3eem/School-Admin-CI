@@ -30,7 +30,9 @@
 	<h1 class="header-w3ls">
 		Search Student</h1>
 	<div class="appointment-w3">
-		<form action="<?=base_url('index.php/student/findStudent')?>" method="post">
+
+<!--    search by rollno.    -->
+        <form action="<?=base_url('index.php/student/findStudent')?>" method="post">
 			<div class="information">
 				<div class="main">
 					<div class="form-left-w3l">
@@ -39,13 +41,30 @@
 					</div>
 				</div>
 			</div>
-            <input type="submit" value="Find by Roll Number">
+            <input type="submit" name="submit" value="Search by Roll Number">
 		</form>
-        <br><br>
-        <form action="<?=base_url('index.php/student/unpaidList')?>" method="post">
-            <input type="submit" value="Unpaid Fee list by 3 months">
+        <!--	search by class	-->
+        <form action="<?=base_url('index.php/student/findStudentClass')?>" method="post">
+            <div class="information">
+                <div class="main">
+                    <div class="form-left-w3l">
+                        <input name="class" type="text" placeholder="Class" required="">
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" name="submit" value="Search by Class">
         </form>
-        <br><br>
+        <hr>
+<!--    Pending students of 3 months    -->
+        <form action="<?=base_url('index.php/student/unpaidList')?>" method="post">
+            <input type="submit" value="Pending list of 3 months">
+        </form>
+<!--    Pending students of 2 months    -->
+        <form action="<?=base_url('index.php/student/unpaidListTwo')?>" method="post">
+            <input type="submit" value="Pending list of 2 months">
+        </form>
+        <br>
 	</div>
 
 

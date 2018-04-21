@@ -48,14 +48,16 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-horizontal">
-                        <label class="col-xs-5 control-label">Student Name:</label>
+                        <label class="col-xs-4 control-label">Student Name:</label>
                         <p class="form-control-static"><?= $NAME ?></p>
-                        <label class="col-xs-5 control-label">Roll Number: </label>
+                        <label class="col-xs-4 control-label">Roll Number: </label>
                         <p class="form-control-static" id="rollnumb"><?= $ROLL ?></p>
-                        <label class="col-xs-5 control-label">Class: </label>
+                        <label class="col-xs-4 control-label">Class: </label>
                         <p class="form-control-static"><?= $CLASS ?></p>
-                        <label class="col-xs-5 control-label">Contact: </label>
+                        <label class="col-xs-4 control-label">Contact: </label>
                         <p class="form-control-static"><?= $CONTACT ?></p>
+                        <label class="col-xs-4 control-label">Conveyance: </label>
+                        <p class="form-control-static" id="conveyance"><?= $CONVEYANCE ?></p>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -166,12 +168,20 @@
     </form>
 </div>
 <script type="text/javascript">
+
+//    var status=document.getElementById("conveyance").innerHTML;
+//    if(status ==="1"){
+//        document.getElementById("conveyance").innerHTML="Available";
+//    }
+//    else{
+//        document.getElementById("conveyance").innerHTML="-";
+//    }
     var acad=document.getElementById("acadfee").innerHTML;
     if(acad ==="-1"){
         document.getElementById("acadfee").innerHTML="No fee submitted yet";
     }
     var conv=document.getElementById("convfee").innerHTML;
-    if(acad ==="-1"){
+    if(conv ==="-1"){
         document.getElementById("convfee").innerHTML="No fee submitted yet";
     }
     function show() {

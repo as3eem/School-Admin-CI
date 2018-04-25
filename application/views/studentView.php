@@ -67,9 +67,9 @@
                         <label class="col-xs-4 control-label">Address: </label>
                         <p class="form-control-static"><?= $ADDRESS ?></p>
                         <label class="col-xs-4 control-label">Academic Fee: </label>
-                        <p class="form-control-static" id="acadfee"><?= $ACADFEE ?></p>
+                        <p class="form-control-static" id="acadfee"><?= $ACADFEE ?> &nbsp;&nbsp;&nbsp;(RN: <?=$RECEIPT_ACAD?>)</p>
                         <label class="col-xs-4 control-label">Conveyance Fee: </label>
-                        <p class="form-control-static" id="convfee"><?= $CONVFEE ?></p>
+                        <p class="form-control-static" id="convfee"><?= $CONVFEE ?>&nbsp;&nbsp;&nbsp;(RN: <?=$RECEIPT_CONV?>)</p>
                     </div>
                 </div>
             </div>
@@ -115,13 +115,20 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectbasic">Enter Latest Receipt Number</label>
+                    <div class="col-md-4">
+                        <input placeholder="Receipt Number" name="rec" type="text" class="form-control" id="usr">
+                    </div>
+                </div>
                 <input name="submit" type="submit" class="btn btn-primary" value="Submit" style="width: 20%; margin-left: 40%"/>
             </fieldset>
         </div>
     </form>
 
 
-<!--    --><br><br><br>
+<!--   Conveyance --><br><br><br>
 
 
     <form style="display: none" action="<?=base_url('index.php/Student/updateConvFee')?>" method="post" id="monthsC">
@@ -160,6 +167,12 @@
                             <option value="2019">2019</option>
                             <option value="2020">2020</option>
                         </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectbasic">Enter Latest Receipt Number</label>
+                    <div class="col-md-4">
+                        <input placeholder="Receipt Number" name="rec" type="text" class="form-control" id="usr">
                     </div>
                 </div>
                 <input name="submit" type="submit" class="btn btn-primary" value="Submit" style="width: 20%; margin-left: 40%"/>

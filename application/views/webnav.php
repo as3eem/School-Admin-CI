@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!-- header -->
             <div class="logo-search">
                 <div class="logo">
-                    <h1><a href="<?=base_url('index.php/Student/home')?>">RI<span class="color">SI</span><span class="color1">N</span><span class="color2">G</span> <span>CHILD</span> <i>A play school</i></a></h1>
+                    <h1><a href="<?=base_url('index.php/Student/home')?>">INDIAN<span class="color">&nbsp;PUBLIC</span><span class="color1">&nbsp;SCHOOL</span><span class="color2"></span> <span></span> <i></i></a></h1>
                 </div>
 <!--                <div class="search">-->
 <!--                    <form>-->

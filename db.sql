@@ -12,7 +12,8 @@ CREATE TABLE IF NOT EXISTS `students` (
    	`ACADFEE` varchar(125),
    	`CONVFEE` varchar(125),
 		`ADDRESS` varchar(125),
-		`RECEIPT` varchar(125),
+		`RECEIPT_ACAD` varchar(125),
+		`RECEIPT_CONV` varchar(125),
 		`CONVEYANCE` varchar(125),
   PRIMARY KEY (id)
 ) ;

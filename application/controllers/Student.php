@@ -5,38 +5,28 @@ class student extends CI_Controller {
 
     public function studentAdd()
     {
-        $roll = $this->input->post('roll',TRUE);
-        $query = "select * from students WHERE ROLL='".$roll."'";
-        $return = $this->_custom_query($query);
-        $xwx=0;
-
-        foreach ($return->result() as $k){
-            $xwx++;
-        }
-        if ($xwx==0) {
-            $submit = $this->input->post('submit', TRUE);
-            if ($submit == "Submit") {
-                $data['NAME'] = $this->input->post('name', TRUE);
-                $data['FNAME'] = $this->input->post('father', TRUE);
-                $data['CONTACT'] = $this->input->post('phone', TRUE);
-                $data['ROLL'] = $this->input->post('roll', TRUE);
-                $data['CLASS'] = $this->input->post('class', TRUE);
-                $data['ADDRESS'] = $this->input->post('address', TRUE);
-                $data['ACADFEE'] = -1;
-                $data['CONVFEE'] = -1;
-                $q = $this->input->post('conv', TRUE);
-                if ($q=="1"){
-                    $data['CONVEYANCE']="Available";
-                }
-                else{
-                    $data['CONVEYANCE']="Not Available";
-                }
-                $this->_insert($data);
+        $submit = $this->input->post('submit', TRUE);
+        if ($submit == "Submit") {
+            $data['NAME'] = $this->input->post('name', TRUE);
+            $data['FNAME'] = $this->input->post('father', TRUE);
+            $data['CONTACT'] = $this->input->post('phone', TRUE);
+            $data['ROLL'] = $this->input->post('roll', TRUE);
+            $data['CLASS'] = $this->input->post('class', TRUE);
+            $data['ADDRESS'] = $this->input->post('address', TRUE);
+            $data['ACADFEE'] = "No fee submitted yet";
+            $data['CONVFEE'] = "No fee submitted yet";
+            $data['RECEIPT_ACAD'] = "";
+            $data['RECEIPT_CONV'] = "";
+            $q = $this->input->post('conv', TRUE);
+            if ($q=="1"){
+                $data['CONVEYANCE']="Available";
             }
+            else{
+                $data['CONVEYANCE']="Not Available";
+            }
+            $this->_insert($data);
         }
-        else{
-            echo "<script language=\"javascript\">alert('Roll number already exist');</script>";
-        }
+
         $this->ips_admin();
     }
     public function ips_admin()
@@ -93,16 +83,11 @@ class student extends CI_Controller {
         $return = $this->_custom_query($query);
         foreach ($return->result() as $k){
             $tst=$k->ACADFEE;
-            if($tst != NULL && $tst!='-1') {
+            if($tst != NULL && $tst!="No fee submitted yet") {
                 $date1 = date_create("30-" . $tst);
                 $date2 = date_create("now");
                 $diff = date_diff($date1, $date2);
                 $result = $diff->m;
-//                print_r($date1);
-//                echo "<br>";
-//                print_r($date2);
-//                echo "<br>";
-//                echo $result;
                 if ($result>3){
                     array_push($list, $k->id);
                 }
@@ -129,7 +114,7 @@ class student extends CI_Controller {
         $return = $this->_custom_query($query);
         foreach ($return->result() as $k){
             $tst=$k->ACADFEE;
-            if($tst != NULL && $tst!='-1') {
+            if($tst != NULL && $tst!="No fee submitted yet") {
                 $date1 = date_create("30-" . $tst);
                 $date2 = date_create("now");
                 $diff = date_diff($date1, $date2);
@@ -160,7 +145,8 @@ class student extends CI_Controller {
             $year=$this->input->post('year');
             $acadDate=$mon."-".$year;
             $roll=$this->input->post('rollno',TRUE);
-            $query = "UPDATE students SET CONVFEE='".$acadDate."' WHERE ROLL='".$roll."'";
+            $rec=$this->input->post('rec',TRUE);
+            $query = "UPDATE students SET CONVFEE='".$acadDate."',RECEIPT_CONV='".$rec."' WHERE ROLL='".$roll."'";
             $this->_custom_query($query);
             echo "<script language=\"javascript\">alert('Fee updated Successfully');</script>";
             $this->ips_admin();
@@ -174,7 +160,8 @@ class student extends CI_Controller {
             $year=$this->input->post('year');
             $acadDate=$mon."-".$year;
             $roll=$this->input->post('rollno',TRUE);
-            $query = "UPDATE students SET ACADFEE='".$acadDate."' WHERE ROLL='".$roll."'";
+            $rec=$this->input->post('rec',TRUE);
+            $query = "UPDATE students SET ACADFEE='".$acadDate."',RECEIPT_ACAD='".$rec."' WHERE ROLL='".$roll."'";
             $this->_custom_query($query);
             echo "<script language=\"javascript\">alert('Fee updated Successfully');</script>";
             $this->ips_admin();
@@ -207,27 +194,30 @@ class student extends CI_Controller {
             $roll=$this->input->post('roll',TRUE);
             $query = "select * from students where ROLL = '$roll'";
             $return = $this->_custom_query($query);
-            foreach ($return->result() as $row)
-            {
-                $data['id'] = $row->id;
-                $data['NAME'] = $row->NAME;
-                $data['FNAME'] = $row->FNAME;
-                $data['CONTACT'] = $row->CONTACT;
-                $data['ROLL'] = $row->ROLL;
-                $data['CLASS'] = $row->CLASS;
-                $data['ADDRESS'] = $row->ADDRESS;
-                $data['ACADFEE'] = $row->ACADFEE;
-                $data['CONVFEE'] = $row->CONVFEE;
-                $q = $row->CONVEYANCE;
-                if ($q=="1"){
-                    $data['CONVEYANCE']="Available";
+            if (sizeof($return->result())>0) {
+                foreach ($return->result() as $row) {
+                    $data['id'] = $row->id;
+                    $data['NAME'] = $row->NAME;
+                    $data['FNAME'] = $row->FNAME;
+                    $data['CONTACT'] = $row->CONTACT;
+                    $data['ROLL'] = $row->ROLL;
+                    $data['CLASS'] = $row->CLASS;
+                    $data['ADDRESS'] = $row->ADDRESS;
+                    $data['ACADFEE'] = $row->ACADFEE;
+                    $data['CONVFEE'] = $row->CONVFEE;
+                    $data['RECEIPT_ACAD'] = $row->RECEIPT_ACAD;
+                    $data['RECEIPT_CONV'] = $row->RECEIPT_CONV;
+                    $data['CONVEYANCE'] = $row->CONVEYANCE;
+
                 }
-                else{
-                    $data['CONVEYANCE']="Not Available";
-                }
+                $this->load->view('navbar');
+                $this->load->view('studentView', $data);
             }
-            $this->load->view('navbar');
-            $this->load->view('studentView',$data);
+            else{
+                echo "<script language=\"javascript\">alert('No such Roll Number Exist');</script>";
+                $this->load->view('navbar');
+                $this->load->view('search');
+            }
         }
     }
     function _custom_query($mysql_query)

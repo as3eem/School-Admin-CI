@@ -125,7 +125,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="banner-bottom">
 					<div class="banner-bottom-grids">
 						<div class="col-md-4 banner-bottom-grid">
-							<h3>Welcome To <span>RSINIG CHILD</span></h3>
+							<h3>Welcome To <span>IPS</span></h3>
 							<h2><i>" Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque laudantium. "</i></h2>
 							<p>But I must explain to you how all this mistaken idea of denouncing 
 								pleasure and praising pain was born and I will give you a complete 

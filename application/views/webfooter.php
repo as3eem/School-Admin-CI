@@ -5,8 +5,7 @@
 <div class="footer">
     <div class="container">
         <h3>Sign up for our newsletter</h3>
-        <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-            tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+        <p class="para"></p>
         <div class="footer-contact">
             <form onsubmit="return confirm('Thank you. We will contact you soon.');">
                 <input type="text" placeholder="Enter your email to update" required=" ">
@@ -15,11 +14,10 @@
         </div>
         <div class="footer-grids">
             <div class="col-md-3 footer-grid">
-                <p>HALOVIETNAM LTD
-                    66, Dang Van ngu, Dong Da
-                    Hanoi, USA.
-                    <a href="mailto:info@example.com">contact@example.com</a>
-                <p>Phone : +844 35149182</p>
+                <p>Indian Public School, Near Railway Crossingm Lucknow Naka Over Bridge, Sultanpur - 228001 (U.P.)
+                    <a href="mailto:ips2011sultanpur@rediffmail.com">ips2011sultanpur@rediffmail.com</a>
+                <p>Phone : +91 9984386128</p>
+                <p>Phone : +91 8423185037</p>
             </div>
             <div class="col-md-3 footer-grid">
                 <ul>
@@ -58,7 +56,7 @@
             <div class="clearfix"> </div>
         </div>
         <div class="footer-copy">
-            <p>&copy 2016 RSINIG CHILD. All rights reserved | Design by <a href="http://RitronixTechnology.com">RitronixTechnology.</a></p>
+            <p>&copy 2016 Indian public School. All rights reserved | Design by <a href="http://RitronixTechnology.com">RitronixTechnology.</a></p>
             <ul>
                 <li><a href="#" class="twitter"><span type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Follow Us On Twitter"></span></a></li>
                 <li><a href="#" class="p"><span type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Follow Us On Pinterest"></span></a></li>
